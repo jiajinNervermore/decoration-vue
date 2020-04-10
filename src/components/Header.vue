@@ -28,7 +28,7 @@
                   <router-link to="codes">Codes</router-link>
                 </li>
                 <li>
-                  <router-link href="contact">Contact</router-link>
+                  <router-link to="contact">Contact</router-link>
                 </li>
               </ul>
             </div>

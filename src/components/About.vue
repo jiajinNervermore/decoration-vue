@@ -7,10 +7,10 @@
 					<h2>About us</h2>
 					<div class="about-grids wow fadeInRight animated animated" data-wow-delay="0.4s">
 						<div class="col-md-8 about-grid">
-							<img src="images/a1.jpg" class="img-responsive" alt=""/>
+							<img :src="require('../assets/images/a1.jpg')" class="img-responsive" alt=""/>
 						</div>
 						<div class="col-md-4 about-grid1 wow fadeInLeft animated animated" data-wow-delay="0.4s">
-							<img src="images/a2.jpg" class="img-responsive" alt=""/>
+							<img :src="require('../assets/images/a2.jpg')" class="img-responsive" alt=""/>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -29,7 +29,7 @@
 						<div class="col-md-4 team-grid wow fadeInLeft animated animated" data-wow-delay="0.4s">
 							<div class="ih-item circle effect1"><a href="#">
 								<div class="spinner"></div>
-								<div class="img"><img src="images/t1.jpg" alt="img"></div>
+								<div class="img"><img :src="require('../assets/images/t1.jpg')" alt="img"></div>
 								<div class="info">
 								  <div class="info-back">
 									<h4>Victoria</h4>
@@ -48,7 +48,7 @@
 						<div class="col-md-4 team-grid wow fadeInDownBig animated animated" data-wow-delay="0.4s">
 							<div class="ih-item circle effect1"><a href="#">
 								<div class="spinner"></div>
-									<div class="img"><img src="images/t2.jpg" alt="img"></div>
+									<div class="img"><img :src="require('../assets/images/t2.jpg')" alt="img"></div>
 								<div class="info">
 									<div class="info-back">
 										<h4>Tincidun</h4>
@@ -67,7 +67,7 @@
 						<div class="col-md-4 team-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
 							<div class="ih-item circle effect1"><a href="#">
 								<div class="spinner"></div>
-									<div class="img"><img src="images/t3.jpg" alt="img"></div>
+									<div class="img"><img :src="require('../assets/images/t3.jpg')" alt="img"></div>
 								<div class="info">
 									<div class="info-back">
 										<h4>Posuere</h4>
@@ -95,21 +95,21 @@
 							<h3>Who we are</h3>
 							<div class="tab1">
 								<ul class="place">
-									<li><img src="images/cir.png" alt=""></li>
+									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
 									<li>Placerat ligula tincidunt</li>
 								</ul>
 							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
 							</div>
 							<div class="tab2">
 								<ul class="place">
-									<li><img src="images/cir.png" alt=""></li>
+									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
 									<li>Sed ut perspiciatis unde</li>
 								</ul>
 							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
 							</div>
 							<div class="tab3">
 								<ul class="place">
-									<li><img src="images/cir.png" alt=""></li>
+									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
 									<li>Eaque ipsa quae ab illo </li>
 								</ul>
 							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
@@ -117,7 +117,7 @@
 							
 							<div class="tab4">
 								<ul class="place">
-									<li><img src="images/cir.png" alt=""></li>
+									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
 									<li>Eaque ipsa quae ab illo </li>
 								</ul>
 							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
@@ -130,7 +130,7 @@
 						<div class="col-md-8 furniture-grid1 wow fadeInLeft animated animated" data-wow-delay="0.4s">
 							<h3>Furniture Design</h3>
 							<div class="fur-img">
-								<img src="images/f1.jpg" class="img-responsive" alt=""/>
+								<img :src="require('../assets/images/f1.jpg')" class="img-responsive" alt=""/>
 							</div>
 						</div>
 					</div>
