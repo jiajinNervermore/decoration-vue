@@ -9,26 +9,11 @@
             </h1>
           </div>
           <div class="nav-icon">
-            <a href="javascript:;" class="navicon" @click="toggle"></a>
-            <div class="toggle">
+            <a href="javascript:;" id="navicon" class="navicon" @click="toggle"></a>
+            <div id="toggle" class="toggle">
               <ul class="toggle-menu">
-                <li>
-                  <router-link to="/">Home</router-link>
-                </li>
-                <li>
-                  <router-link to="about">About</router-link>
-                </li>
-                <li>
-                  <router-link to="services">Services</router-link>
-                </li>
-                <li>
-                  <router-link to="gallery">Gallery</router-link>
-                </li>
-                <li>
-                  <router-link to="codes">Codes</router-link>
-                </li>
-                <li>
-                  <router-link to="contact">Contact</router-link>
+                <li v-for="(item, index) of rou" :key="index">
+                  <router-link :to="item.to">{{item.name}}</router-link>
                 </li>
               </ul>
             </div>
@@ -36,8 +21,7 @@
           <div class="clearfix"></div>
         </div>
         <div class="banner-text wow fadeInLeft animated animated" data-wow-delay="0.4s">
-          <h3>We are a Creative Interior Design Studio</h3>
-          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit consectetur adipiscing elit Mauris</p>
+          <h3>{{title}}</h3>
         </div>
       </div>
     </div>
@@ -46,13 +30,33 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: "我们是一个有创意的室内设计工作室",
+      rou: [
+        { to: "/", name: "Home" },
+        { to: "about", name: "About" },
+        { to: "services", name: "Services" },
+        { to: "gallery", name: "Gallery" }
+      ],
+      isToggle:false
+    };
+  },
   methods: {
-    toggle(e) {
-      $(".navicon").on("click", function(e) {
-        e.preventDefault();
-        $(this).toggleClass("navicon--active");
-        $(".toggle").toggleClass("toggle--active");
-      });
+    toggle() { 
+      this.isToggle = !this.isToggle
+      let nav = document.getElementById('navicon');
+      let tog = document.getElementById('toggle');
+      console.log(nav,tog)
+      if(this.isToggle){
+        nav.classList.add('navicon--active');
+        tog.classList.add('toggle--active');
+      }else{
+        nav.classList.remove('navicon--active');
+        tog.classList.remove('toggle--active');
+      }    
+      // $("#nav").toggleClass("navicon--active");      
+      // $("#toggle").toggleClass("toggle--active");
     }
   }
 };

@@ -17,7 +17,7 @@
 							    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0  wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 									<div class="tab_img">
 										<div class="col-md-4 img-top ">
-					   		  			    <a class="example-image-link" href="require('../assets/images/g1.jpg')" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses ">
+					   		  			    <a class="example-image-link" href="../assets/images/g1.jpg" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses ">
 											<img class="example-image" :src="require('../assets/images/g1.jpg')" alt=""/>
 												 <div class="link-top">
 												 <i class="link"> </i>
@@ -196,7 +196,7 @@
 									</div>	
 							     	<div class="tab_img">
 										<div class="col-md-4 img-top ">
-					   		  			   <a class="example-image-link" :href="require('../assets/images/g1.jpg')" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses.">
+					   		  			   <a class="example-image-link" href="../assets/images/g1.jpg" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses.">
 											<img class="example-image" :src="require('../assets/images/g1.jpg')" alt=""/>
 												 <div class="link-top">
 												 <i class="link"> </i>
@@ -217,7 +217,7 @@
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3  wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 									<div class="tab_img">
 										<div class="col-md-4 img-top ">
-					   		  			   <a class="example-image-link" :href="images/g10.jpg" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses.">
+					   		  			   <a class="example-image-link" :href="require('../assets/images/g10.jpg')" data-lightbox="example-set" data-title="Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses.">
 											<img class="example-image" :src="require('../assets/images/g10.jpg')" alt=""/>
 												 <div class="link-top">
 												 <i class="link"> </i>

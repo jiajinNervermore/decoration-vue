@@ -5,8 +5,8 @@
     <div class="content">
       <div class="welcome-section">
         <div class="container">
-          <h2>Welcome</h2>
-          <span>Our company offers you the best design solutions to make your home interior unique and stylish</span>
+          <h2>欢迎光临</h2>
+          <span>{{title}}</span>
           <div class="welcome-grids">
             <div class="col-md-4 wel-grid wow fadeInLeft animated animated" data-wow-delay="0.4s">
               <img src="../assets/images/w1.jpg" class="img-responsive" alt />
@@ -257,7 +257,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      title:'我们的公司为您提供最佳的设计方案，使您的家庭内部独特和时尚'
+    }
+  }
+};
 </script>
 
 <style>
