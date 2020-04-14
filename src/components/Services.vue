@@ -137,7 +137,33 @@
 
 <script>
 export default {
-
+data() {
+    return {
+			kitchenBath:[],
+			livingroom:[],
+			bedroom:[]
+		};
+  },
+  created() {
+    this.loadMore();
+  },
+  methods: {
+    loadMore() {
+      this.axios
+        .get("/services")
+        .then(res => {
+          console.log(res,res.data.aboutpic[0].works);
+					
+          // this.kitchenBath = res.data.kitchenBath
+          // this.livingroom = res.data.livingroom
+          // this.bedroom = res.data.bedroom
+          
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  }
 }
 </script>
 

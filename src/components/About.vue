@@ -4,7 +4,7 @@
 		
 			<div class="about-section">
 				<div class="container">
-					<h2>About us</h2>
+					<h2>关于我们</h2>
 					<div class="about-grids wow fadeInRight animated animated" data-wow-delay="0.4s">
 						<div class="col-md-8 about-grid">
 							<img :src="require('../assets/images/a1.jpg')" class="img-responsive" alt=""/>
@@ -143,7 +143,32 @@
 
 <script>
 export default {
-
+	data(){
+		return {
+			aboutpic:[],
+			company:[],
+			designer:[],
+			team:[]
+		}
+	},
+	created() {
+		this.loadMore()
+	},
+	methods: {
+		loadMore(){
+			this.axios.get('/about')
+			.then(res=>{
+				console.log(res)
+				this.aboutpic = res.data.aboutpic
+				this.company = res.data.company
+				this.designer = res.data.designer
+				this.team = res.data.team
+			})
+			.catch(err=>{
+				console.log(err)
+			})
+		}
+	},
 }
 </script>
 

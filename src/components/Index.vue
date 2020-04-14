@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <!--header-->
     <div class="content">
       <div class="welcome-section">
@@ -8,30 +7,19 @@
           <h2>欢迎光临</h2>
           <span>{{title}}</span>
           <div class="welcome-grids">
-            <div class="col-md-4 wel-grid wow fadeInLeft animated animated" data-wow-delay="0.4s">
-              <img src="../assets/images/w1.jpg" class="img-responsive" alt />
-              <div class="wel-text hvr-shutter-out-horizontal">
-                <h4>Residential Design</h4>
-                <p>Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses nullader yoleac enanrit ma deuytas.</p>
-              </div>
-            </div>
             <div
-              class="col-md-4 wel-grid wow fadeInDownBig animated animated"
+              class="col-md-4 wel-grid wow fadeInLeft animated animated"
               data-wow-delay="0.4s"
+              v-for="(item, index) in scheme"
+              :key="index"
             >
-              <div class="wel-text hvr-shutter-out-horizontal wel1">
-                <h4>Office Design</h4>
-                <p>Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses nullader yoleac enanrit ma deuytas.</p>
-              </div>
-              <img src="../assets/images/w2.jpg" class="img-responsive" alt />
-            </div>
-            <div class="col-md-4 wel-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
-              <img src="../assets/images/w3.jpg" class="img-responsive" alt />
+              <img :src="URL+item.pic" class="img-responsive" alt />
               <div class="wel-text hvr-shutter-out-horizontal">
-                <h4>Residential Design</h4>
-                <p>Betasase ferode vetuyasas deulidas vacsques mtreasades vias asey yoleacene aris masease. Bsaeats laoieu lacsqueses nullader yoleac enanrit ma deuytas.</p>
+                <h4>{{item.title}}</h4>
+                <p>{{item.descs}}</p>
               </div>
             </div>
+
             <div class="clearfix"></div>
           </div>
         </div>
@@ -41,99 +29,37 @@
         data-wow-delay="0.4s"
         style="visibility: visible; -webkit-animation-delay: 0.4s;"
       >
-        <div class="col-md-4 services-grids">
+        <div
+          class="col-md-4 services-grids wow zoomIn animated classical"
+          :data-wow-delay="index==0?'':'.5s'"
+          v-for="(item, index) in classical"
+          :key="index"
+        >
           <div class="flip-effect right">
             <div class="text-box">
-              <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
-              <h5>Congue scelerisque sit</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
+              <i :class="[{glyphicon:true},classicalIclass[index]]" aria-hidden="true"></i>
+              <h5>{{item.title}}</h5>
+              <p class="classicalDesc">{{item.descs}}</p>
             </div>
             <div class="info-box">
               <div class="info-content">
-                <img src="../assets/images/p.jpg" class="img-responsive" alt />
+                <img :src="URL+item.pic" class="img-responsive" alt />
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-          <div class="flip-effect right">
-            <div class="text-box">
-              <i class="glyphicon glyphicon-bell" aria-hidden="true"></i>
-              <h5>Scelerisque sitc ongue</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
-            </div>
-            <div class="info-box">
-              <div class="info-content">
-                <img src="../assets/images/p1.jpg" class="img-responsive" alt />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-          <div class="flip-effect right">
-            <div class="text-box">
-              <i class="glyphicon glyphicon-wrench" aria-hidden="true"></i>
-              <h5>Guecon scelerisque sit</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
-            </div>
-            <div class="info-box">
-              <div class="info-content">
-                <img src="../assets/images/p2.jpg" class="img-responsive" alt />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-          <div class="flip-effect right">
-            <div class="text-box">
-              <i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-              <h5>Risquescele congue sit</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
-            </div>
-            <div class="info-box">
-              <div class="info-content">
-                <img src="../assets/images/p3.jpg" class="img-responsive" alt />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-          <div class="flip-effect right">
-            <div class="text-box">
-              <i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
-              <h5>Blanditiis iure minima</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
-            </div>
-            <div class="info-box">
-              <div class="info-content">
-                <img src="../assets/images/p4.jpg" class="img-responsive" alt />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-          <div class="flip-effect right">
-            <div class="text-box">
-              <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-              <h5>Nulla aliquam ornare</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Mauris ex nulla aliquam ornare facilisis nec</p>
-            </div>
-            <div class="info-box">
-              <div class="info-content">
-                <img src="../assets/images/p5.jpg" class="img-responsive" alt />
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div class="clearfix"></div>
       </div>
       <div class="capabilities">
         <div class="container">
-          <h3>Interiors Capabilities</h3>
+          <h3>内部功能</h3>
           <div class="capabil-grids">
             <div
               class="col-md-3 capabil-grid wow fadeInLeft animated animated"
               data-wow-delay="0.4s"
+              v-for="(item, index) in interiors"
+              :key="index"
             >
               <div class="cap">
                 <div
@@ -143,58 +69,11 @@
                   data-max="57000"
                   data-delay=".5"
                   data-increment="100"
-                >57000</div>
+                >{{item.num}}</div>
               </div>
-              <h5>Happy Clients</h5>
+              <h5>{{item.title}}</h5>
             </div>
-            <div
-              class="col-md-3 capabil-grid wow fadeInUpBig animated animated"
-              data-wow-delay="0.4s"
-            >
-              <div class="cap">
-                <div
-                  class="numscroller numscroller-big-bottom"
-                  data-slno="1"
-                  data-min="0"
-                  data-max="1700"
-                  data-delay=".5"
-                  data-increment="5"
-                >1700</div>
-              </div>
-              <h5>Modern design</h5>
-            </div>
-            <div
-              class="col-md-3 capabil-grid wow fadeInDownBig animated animated"
-              data-wow-delay="0.4s"
-            >
-              <div class="cap">
-                <div
-                  class="numscroller numscroller-big-bottom"
-                  data-slno="1"
-                  data-min="0"
-                  data-max="90000"
-                  data-delay=".5"
-                  data-increment="100"
-                >90000</div>
-              </div>
-              <h5>Followers</h5>
-            </div>
-            <div
-              class="col-md-3 capabil-grid wow fadeInRight animated animated"
-              data-wow-delay="0.4s"
-            >
-              <div class="cap">
-                <div
-                  class="numscroller numscroller-big-bottom"
-                  data-slno="1"
-                  data-min="0"
-                  data-max="250"
-                  data-delay=".5"
-                  data-increment="1"
-                >250</div>
-              </div>
-              <h5>Awards</h5>
-            </div>
+
             <div class="clearfix"></div>
           </div>
         </div>
@@ -206,43 +85,24 @@
               class="col-md-4 testimonial-grid wow fadeInLeft animated animated"
               data-wow-delay="0.4s"
             >
-              <h3>Testimonial</h3>
-              <div class="testimonial-info">
+              <h3>客户反馈</h3>
+              <div class="testimonial-info" v-for="(item, index) in feedback" :key="index">
                 <p>
-                  <span>"</span> Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc. Praesent quis felis eget
+                  <span>"</span>
+                  {{item.descs}}
                 </p>
-                <h5>William Patrick.</h5>
-              </div>
-              <div class="testimonial-info">
-                <p>
-                  <span>"</span> Vestibulum et consequat justo. Maecenas ultrices malesuada leo porta venenatis. Sed sit amet diam facilisis, interdum tellus nec
-                </p>
-                <h5>Frederic Victoria</h5>
-              </div>
-              <div class="testimonial-info">
-                <p>
-                  <span>"</span> Cras elementum sed mi sit amet ullamcorper. Cras sed felis a enim rutrum lobortis a eu nisi. Curabitur justo libero, hendrerit at
-                </p>
-                <h5>Kimberly Thompson</h5>
+                <h5>{{item.users}}</h5>
               </div>
             </div>
             <div
               class="col-md-8 testimonial-grid-right wow fadeInRight animated animated"
               data-wow-delay="0.4s"
             >
-              <h3>Latest Works</h3>
+              <h3>最新作品</h3>
               <div class="works-grids">
-                <div class="col-md-4 works-grid">
-                  <img src="../assets/images/e1.jpg" class="img-responsive" alt />
-                  <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc. Praesent quis felis eget.</p>
-                </div>
-                <div class="col-md-4 works-grid">
-                  <img src="../assets/images/e2.jpg" class="img-responsive" alt />
-                  <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc. Praesent quis felis eget.</p>
-                </div>
-                <div class="col-md-4 works-grid">
-                  <img src="../assets/images/e3.jpg" class="img-responsive" alt />
-                  <p>Quisque varius, nibh ac feugiat interdum, libero massa laoreet tellus, nec congue lorem arcu a nunc. Praesent quis felis eget.</p>
+                <div class="col-md-4 works-grid" v-for="(item, index) in newest" :key="index">
+                  <img :src="URL+item.pic" class="img-responsive" alt />
+                  <p>{{item.descs}}</p>
                 </div>
                 <div class="clearfix"></div>
               </div>
@@ -252,19 +112,67 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-  data(){
+  data() {
     return {
-      title:'我们的公司为您提供最佳的设计方案，使您的家庭内部独特和时尚'
-    }
+      title: "我们的公司为您提供最佳的设计方案，使您的家庭内部独特和时尚",
+      background: [],
+      scheme: [],
+      classical: [],
+      interiors: [],
+      feedback: [],
+      newest: [],
+      classicalIclass: [
+        "glyphicon-user",
+        "glyphicon-bell",
+        "glyphicon-wrench",
+        "glyphicon-home",
+        "glyphicon-lock",
+        "glyphicon-shopping-cart"
+      ]
+    };
+  },
+  created() {
+    this.loadMore()
+    console.log(this.URL);
+  },
+  methods: {
+    // 获取首页数据
+    loadMore() {
+      this.axios.get("/index").then(res => {
+        console.log(res.data);
+        this.background = res.data.background;
+        this.scheme = res.data.scheme;
+        this.classical = res.data.classical;
+        this.interiors = res.data.interiors;
+        this.feedback = res.data.feedback;
+        this.newest = res.data.newest;
+      });
+    },
+
+
+  },
+  computed: {
+    ...mapState(["URL"])
   }
 };
 </script>
 
-<style>
+<style scope>
+.classical {
+  height: 245px;
+  overflow: hidden;
+}
+.classicalDesc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
 </style>

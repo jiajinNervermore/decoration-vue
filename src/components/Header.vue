@@ -47,7 +47,6 @@ export default {
       this.isToggle = !this.isToggle
       let nav = document.getElementById('navicon');
       let tog = document.getElementById('toggle');
-      console.log(nav,tog)
       if(this.isToggle){
         nav.classList.add('navicon--active');
         tog.classList.add('toggle--active');
