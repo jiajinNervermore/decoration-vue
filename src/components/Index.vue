@@ -262,6 +262,19 @@ export default {
     return {
       title:'我们的公司为您提供最佳的设计方案，使您的家庭内部独特和时尚'
     }
+  },
+  mounted(){
+    this.loadmore()
+  },
+  methods:{
+    loadmore(){
+      this.axios.get('/index').then(res=>{
+        console.log(res)
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+    }
   }
 };
 </script>
