@@ -1,152 +1,169 @@
 <template>
   <div>
-  		<div class="content">
-		
-			<div class="about-section">
-				<div class="container">
-					<h2>About us</h2>
-					<div class="about-grids wow fadeInRight animated animated" data-wow-delay="0.4s">
-						<div class="col-md-8 about-grid">
-							<img :src="require('../assets/images/a1.jpg')" class="img-responsive" alt=""/>
-						</div>
-						<div class="col-md-4 about-grid1 wow fadeInLeft animated animated" data-wow-delay="0.4s">
-							<img :src="require('../assets/images/a2.jpg')" class="img-responsive" alt=""/>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="about-at wow fadeInRight animated animated" data-wow-delay="0.4s">
-						<h4> Nam libero tempore, cum soluta nobis est eligendi</h4>
-						<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
-						But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings</p>
-					</div>
-				</div>
-			</div>
-		
-			<div class="team-section">
-				<div class="container">
-					<h3> Our Team Members</h3>
-					<div class="team-grids">
-						<div class="col-md-4 team-grid wow fadeInLeft animated animated" data-wow-delay="0.4s">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-								<div class="img"><img :src="require('../assets/images/t1.jpg')" alt="img"></div>
-								<div class="info">
-								  <div class="info-back">
-									<h4>Victoria</h4>
-									<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icon"></i></a>
-								<a href="#"><i class="icon1"></i></a>
-								<a href="#"><i class="icon2"></i></a>
-								<a href="#"><i class="icon3"></i></a>
-							</div>
-						</div>
-						<div class="col-md-4 team-grid wow fadeInDownBig animated animated" data-wow-delay="0.4s">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-									<div class="img"><img :src="require('../assets/images/t2.jpg')" alt="img"></div>
-								<div class="info">
-									<div class="info-back">
-										<h4>Tincidun</h4>
-										<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icon"></i></a>
-								<a href="#"><i class="icon1"></i></a>
-								<a href="#"><i class="icon2"></i></a>
-								<a href="#"><i class="icon3"></i></a>
-							</div>
-						</div>
-						<div class="col-md-4 team-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
-							<div class="ih-item circle effect1"><a href="#">
-								<div class="spinner"></div>
-									<div class="img"><img :src="require('../assets/images/t3.jpg')" alt="img"></div>
-								<div class="info">
-									<div class="info-back">
-										<h4>Posuere</h4>
-										<span>Description goes here</span>
-								  </div>
-								</div></a>
-							</div>
-							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-							<div class="social-icons">
-								<a href="#"><i class="icon"></i></a>
-								<a href="#"><i class="icon1"></i></a>
-								<a href="#"><i class="icon2"></i></a>
-								<a href="#"><i class="icon3"></i></a>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="furniture">
-				<div class="container">
-					<div class="furniture-grids">
-						<div class="col-md-4 furniture-grid wow fadeInRight animated animated" data-wow-delay="0.4s">
-							<h3>Who we are</h3>
-							<div class="tab1">
-								<ul class="place">
-									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
-									<li>Placerat ligula tincidunt</li>
-								</ul>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-							</div>
-							<div class="tab2">
-								<ul class="place">
-									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
-									<li>Sed ut perspiciatis unde</li>
-								</ul>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-							</div>
-							<div class="tab3">
-								<ul class="place">
-									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
-									<li>Eaque ipsa quae ab illo </li>
-								</ul>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-							</div>
-							
-							<div class="tab4">
-								<ul class="place">
-									<li><img :src="require('../assets/images/cir.png')" alt=""></li>
-									<li>Eaque ipsa quae ab illo </li>
-								</ul>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-							</div>
-							
-							
+    <Header></Header>
+    <div class="content">
+      <div class="about-section">
+        <div class="container">
+          <h2>关于我们</h2>
+          <div class="about-grids wow fadeInRight animated animated" data-wow-delay="0.4s">
+            <div class="col-md-8 about-grid">
+              <img :src="URL+lg" class="img-responsive" alt />
+            </div>
+            <div
+              class="col-md-4 about-grid1 wow fadeInLeft animated animated"
+              data-wow-delay="0.4s"
+            >
+              <img :src="URL+ms" class="img-responsive" alt />
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="about-at wow fadeInRight animated animated" data-wow-delay="0.4s">
+            <h4>{{companyDesc.title}}</h4>
+            <p>{{companyDesc.decs}}</p>
+          </div>
+        </div>
+      </div>
 
-						
-						</div>
-						<div class="col-md-8 furniture-grid1 wow fadeInLeft animated animated" data-wow-delay="0.4s">
-							<h3>Furniture Design</h3>
-							<div class="fur-img">
-								<img :src="require('../assets/images/f1.jpg')" class="img-responsive" alt=""/>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-		
-		</div>
+      <div class="team-section">
+        <div class="container">
+          <h3>我们的技术团队</h3>
+          <div class="team-grids">
+            <div
+              class="col-md-4 team-grid wow fadeInDownBig animated animated"
+              data-wow-delay="0.4s"
+              v-for="(item,index) of designer"
+              :key="index"
+            >
+              <div class="ih-item circle effect1">
+                <a href="#">
+                  <div class="spinner"></div>
+                  <div class="img">
+                    <img :src="URL+item.pic" alt="img" />
+                  </div>
+                  <div class="info">
+                    <div class="info-back">
+                      <h4>{{item.uname}}</h4>
+                      <span>{{item.title}}</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <p>{{item.descs}}</p>
+              <div class="social-icons">
+                <a href="#" v-for="(item,index) of icons" :key="index">
+                  <i :class="item"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="furniture">
+        <div class="container">
+          <div class="furniture-grids">
+            <div
+              class="col-md-4 furniture-grid wow fadeInRight animated animated"
+              data-wow-delay="0.4s"
+            >
+              <h3>我们的团队</h3>
+              <div :class="tabs[i]" v-for="(item,i) of team" :key="i">
+                <ul class="place" @click="show(i)">
+                  <li>
+                    <img :src="require('../assets/images/cir.png')" alt />
+                  </li>
+                  <li>{{item.title}}:{{item.uname}}</li>
+                </ul>
+                <p class="hide">{{item.descs}}</p>
+              </div>
+              
+            </div>
+            <div
+              class="col-md-8 furniture-grid1 wow fadeInLeft animated animated"
+              data-wow-delay="0.4s"
+            >
+              <h3>家具设计</h3>
+              <div class="fur-img">
+                <img :src="URL+Furniture" class="img-responsive" alt />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Header from "./Header";
+import Footer from "./Footer";
+import { mapState, mapMutations } from "vuex";
 export default {
-
-}
+  components: {
+    Header,
+    Footer
+  },
+  data() {
+    return {
+      aboutpic: [],
+      company: [],
+      designer: [],
+      team: [],
+      lg: "",
+      ms: "",
+			icons: ["icon", "icon1", "icon2", "icon3"],
+			tabs:['tab1','tab2','tab3','tab4'],
+			Furniture:'',
+			ischeckShow:false
+    };
+  },
+  computed: {
+    ...mapState(["URL", "companyDesc"])
+  },
+  created() {
+    this.loadMore();
+  },
+  methods: {
+    loadMore() {
+      this.axios
+        .get("/about")
+        .then(res => {
+          console.log(res);
+					this.aboutpic = res.data.aboutpic;
+					// 大图 小图
+          this.lg = this.aboutpic[0].pics.lg;
+					this.ms = this.aboutpic[0].pics.ms;
+					// 将公司的信息保存到vuex里面
+          this.company = res.data.company;
+					this.setCompany(this.company[0]);
+					// 家具设计
+					this.Furniture = this.companyDesc.pics.Furniture
+          this.designer = res.data.designer;
+          this.team = res.data.team;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+		...mapMutations(["setCompany"]),
+		show(i){
+			this.ischeckShow = !this.ischeckShow;
+			var ul = document.getElementsByClassName('place')[i]
+			var p = ul.nextSibling
+			p.className=this.ischeckShow?'show':'hide'
+		}
+  }
+};
 </script>
 
-<style>
-
+<style scope>
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
 </style>

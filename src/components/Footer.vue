@@ -18,10 +18,16 @@
         </div>
         <div class="copy">
           <p>
-            Copyright &copy; 2016.Company name All rights reserved.More Templates
-            <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from
-            <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+            公司名: {{companyDesc.uname}} 
           </p>
+          <p>
+            <span>微信:{{companyDesc.wechat}} | </span>
+            <span>qq:{{companyDesc.qq}} | </span>
+            <span>联系电话:{{companyDesc.phone}} | </span>
+            <span>新浪微博:{{companyDesc.weibo}} | </span>
+            <span>邮箱:{{companyDesc.email}}</span>
+          </p>
+          <p>地址:{{companyDesc.addr}}</p>
         </div>
       </div>
     </div>
@@ -29,11 +35,39 @@
 </template>
 
 <script>
-export default {
+import { mapState, mapMutations } from "vuex";
 
-}
+export default {
+  data() {
+    return {
+      company: []
+    };
+  },
+  computed: {
+    ...mapState(["URL", "companyDesc"])
+  },
+  created(){
+    this.loadMore();
+  },
+  methods:{
+    ...mapMutations(["setCompany"]),
+    loadMore() {
+      this.axios
+        .get("/about")
+        .then(res => {      
+					// 将公司的信息保存到vuex里面
+          this.company = res.data.company;
+          this.setCompany(this.company[0]);
+          console.log(this.companyDesc)
+					// 家具设计
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+  }
+};
 </script>
 
 <style>
-
 </style>

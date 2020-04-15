@@ -550,7 +550,7 @@ width: 100%;
 
 .testimonial-info h5 {
     color: #282828;
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0.5em 0 0;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
@@ -885,7 +885,7 @@ width: 100%;
 .social-icons a i {
     width: 32px;
     height: 32px;
-    background: #2d3134 url(../../src/assets/images/img-sprite.png) no-repeat 0px 0px;
+ 
     display: inline-block;
     margin: 0 0.2em;
     transition: 0.5s all;
@@ -896,38 +896,38 @@ width: 100%;
 }
 
 .social-icons i.icon:hover {
-    background: #009B97 url(../../src/assets/images/img-sprite.png) no-repeat 0px 0px;
+    background: #fff url(../../src/assets/images/weixin.png) no-repeat 0px 0px;
     transform: rotateY(360deg);
 }
 
 .social-icons i.icon {
-    background-position: 0px 0px;
+    background: #696969 url(../../src/assets/images/weixin-1.png) no-repeat 0px 0px;
 }
 
 .social-icons i.icon1 {
-    background-position: -32px 0px;
+    background: #696969 url(../../src/assets/images/QQ-1.png);
 }
 
 .social-icons i.icon1:hover {
-    background: #009B97 url(../../src/assets/images/img-sprite.png) no-repeat -32px 0px;
+    background: #fff url(../../src/assets/images/QQ.png);
     transform: rotateY(360deg);
 }
 
 .social-icons i.icon2 {
-    background-position: -64px 0px;
+    background: #696969 url(../../src/assets/images/dianhua-1.png) no-repeat 0px 0px;
 }
 
 .social-icons i.icon2:hover {
-    background: #009B97 url(../../src/assets/images/img-sprite.png) no-repeat -64px 0px;
+    background: #fff  url(../../src/assets/images/dianhua.png) ;
     transform: rotateY(360deg);
 }
 
 .social-icons i.icon3 {
-    background-position: -96px 0px;
+    background: #696969 url(../../src/assets/images/weibo-1.png) no-repeat 0px 0px;
 }
 
 .social-icons i.icon3:hover {
-    background: #009B97 url(../../src/assets/images/img-sprite.png) no-repeat -96px 0px;
+    background: #fff  url(../../src/assets/images/weibo.png);
     transform: rotateY(360deg);
 }
 
@@ -989,7 +989,7 @@ ul.place li {
 
 .serce-grid h5 {
     color: #009b97;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-family: 'Josefin Sans', sans-serif;
     text-transform: capitalize;
     padding: 0.8em 0 0.5em;
@@ -1546,7 +1546,7 @@ h3.ghj {
             width: 50%;
         }
         .serce-grid h5 {
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         .choose-gd {
             float: left;
@@ -1920,7 +1920,7 @@ h3.ghj {
         font-size: 1.3em;
     }
     .serce-grid h5 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .about-grid {
         width: 100%;
