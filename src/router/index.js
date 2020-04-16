@@ -58,7 +58,7 @@ Vue.use(VueRouter)
       path: '/login',
       name: 'Login',
       meta:{
-        title:'注册—春晓室内设计工作室'
+        title:'登录—春晓室内设计工作室'
       },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
