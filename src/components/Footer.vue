@@ -58,7 +58,7 @@ export default {
 					// 将公司的信息保存到vuex里面
           this.company = res.data.company;
           this.setCompany(this.company[0]);
-          console.log(this.companyDesc)
+          
 					// 家具设计
         })
         .catch(err => {

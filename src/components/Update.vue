@@ -1,15 +1,12 @@
 <template>
   <div class="Register">
-    <h3 style="marginBottom:1rem;marginTop:1rem;">用户注册</h3>
+    <h3 style="marginBottom:1rem;marginTop:1rem;">用户修改</h3>
     <div class="content">
       <el-form ref="form" :model="form" label-width="80px" class="form">
         <el-form-item label="用户名">
           <el-input
-            v-model="form.uname"
-            clearable
-            maxlength="16"
-            show-word-limit
-            @blur="unameCheck"
+            :disabled="true"
+            v-model="userInfo.uname"
           ></el-input>
         </el-form-item>
         <el-form-item label="密码">
@@ -36,15 +33,12 @@
           <el-input v-model="form.captcha" clearable></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">立即注册</el-button>
-          <el-button>取消</el-button>
+          <el-button type="primary" @click="onSubmit">立即修改</el-button>
+          <el-button @click="back">返回</el-button>
         </el-form-item>
       </el-form>
       <div class="prompt">
-        <p :class="form.uname?'show':'hide'">
-          <img :src="require(`../assets/images/${uname?'cuowuicon.png':'queren.png'}`)" alt />
-          <span :class="uname?'show':'hide'">格式错误</span>
-          <span :class="isUserRegister?'show':'hide'">该用户名已经被注册</span>
+        <p :class="form.uname?'show':'hide'">          
         </p>
         <p :class="form.upwd?'show':'hide'">
           <img :src="require(`../assets/images/${upwd?'cuowuicon.png':'queren.png'}`)" alt />
@@ -71,12 +65,14 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+import { userInfo } from 'os';
 export default {
   data() {
     return {
       input: "",
       form: {
-        uname: "",
+        uname: '',
         upwd: "",
         upwd2: "",
         email: "",
@@ -90,6 +86,7 @@ export default {
     };
   },
   computed: {
+    ...mapState(['userInfo']),
     captchaURL() {
       return (
         this.axios.defaults.baseURL + "/user/register/captcha?" + this.randNum
@@ -123,6 +120,18 @@ export default {
       var upwd = this.form.upwd.trim();
       return pPattern.test(upwd) ? false : true;
     },
+    // 检测用户名格式
+    checkUname(){
+      var reg = /^[a-zA-Z0-9_-]{8,16}$/;
+      var uname = this.form.uname.trim();
+      if(!reg.test(uname)&& this.form.uname){
+        return '格式错误'
+      }else if(this.isUserRegister&&reg.test(uname) && this.form.uname){
+        return '该用户名已被注册'
+      }else {
+        return ''
+      }
+    },
     // 检测邮箱格式
     checkEmail() {
       var regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -137,6 +146,10 @@ export default {
     }
   },
   methods: {
+    //返回上一页 
+    back(){
+      this.$router.go(-1)
+    },
     // 检测账号是否已经注册和格式是否正确
     unameCheck() {
       var reg = /^[a-zA-Z0-9_-]{8,16}$/;
@@ -171,35 +184,28 @@ export default {
     },
     onSubmit() {
       let obj = {
-        uname: this.form.uname,
+        uname: this.userInfo.uname,
         upwd: this.form.upwd,
         email: this.form.email,
         phone: this.form.phone,
-        captcha: this.form.captcha
+        captcha: this.form.captcha,
+        uid : this.userInfo.uid
       };
-      console.log(!this.uname, !this.checkPhone, !this.upwd, !this.checkEmail);
-      if (!this.uname && !this.upwd && !this.checkEmail && !this.checkPhone) {
+      console.log(!this.checkPhone, !this.upwd, !this.checkEmail);
+      if (!this.upwd && !this.checkEmail && !this.checkPhone) {
         this.axios
-          .post("/user/register", obj)
+          .post("/user/update", obj)
           .then(res => {
             console.log(res);
             if (res.data.code == 200) {
-              this.$confirm("是否跳转到登录页面?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                type: "warning"
-              })
-                .then(() => {
-                  this.$router.push('/login')
-                })
-                .catch(() => {
-                  this.$message({
-                    type: "info",
-                    message: "已取消操作"
-                  });
-                });
+              this.$message('修改成功')
+              this.form.upwd = ''
+              this.form.upwd2 = ''
+              this.form.email = ''
+              this.form.phone = ''
+              this.form.captcha = ''
             }else{
-              this.$message('注册失败,用户名已被注册过')
+              this.$message('修改失败,用户名已被注册过')
             }
           })
           .catch(err => {
@@ -222,7 +228,7 @@ export default {
 .Register .content {
   width: 600px;
   margin: 0 auto;
-  border: 1px solid #f8f8ff;
+  border: 1px solid #00ffff;
   padding: 2rem;
   display: flex;
   justify-content: space-between;

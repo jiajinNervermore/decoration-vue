@@ -63,14 +63,6 @@ i.glyphicon.glyphicon-menu-hamburger {
 
 /*--banner--*/
 
-.header {
-    background: url(../../src/assets/images/6.jpg) no-repeat 0px 0px;
-    width: 100%;
-    background-size: cover;
-    min-height: 832px;
-    display: block;
-}
-
 
 /*--banner--*/
 
@@ -885,7 +877,6 @@ width: 100%;
 .social-icons a i {
     width: 32px;
     height: 32px;
- 
     display: inline-block;
     margin: 0 0.2em;
     transition: 0.5s all;
@@ -918,7 +909,7 @@ width: 100%;
 }
 
 .social-icons i.icon2:hover {
-    background: #fff  url(../../src/assets/images/dianhua.png) ;
+    background: #fff url(../../src/assets/images/dianhua.png);
     transform: rotateY(360deg);
 }
 
@@ -927,7 +918,7 @@ width: 100%;
 }
 
 .social-icons i.icon3:hover {
-    background: #fff  url(../../src/assets/images/weibo.png);
+    background: #fff url(../../src/assets/images/weibo.png);
     transform: rotateY(360deg);
 }
 

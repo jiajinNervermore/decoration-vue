@@ -95,7 +95,7 @@ export default {
           this.bedroom = res.data.bedroom;
           this.all = [...this.kitchenBath, ...this.livingroom, ...this.bedroom];
           this.all = bubble(this.all).slice(0, 9);
-          console.log(this.all);
+          
         })
         .catch(err => {
           console.log(err);

@@ -146,7 +146,7 @@ export default {
       this.axios
         .get("/services")
         .then(res => {
-          console.log(res);
+          
           this.services = res.data.aboutpic[0].services;
           this.works = res.data.aboutpic[0].works;
           this.company = res.data.company;

@@ -131,7 +131,7 @@ export default {
       this.axios
         .get("/about")
         .then(res => {
-          console.log(res);
+          
 					this.aboutpic = res.data.aboutpic;
 					// 大图 小图
           this.lg = this.aboutpic[0].pics.lg;

@@ -147,13 +147,13 @@ export default {
   },
   created() {
     this.loadMore();
-    console.log(this.URL);
+    
   },
   methods: {
     // 获取首页数据
     loadMore() {
       this.axios.get("/index").then(res => {
-        console.log(res.data);
+        
         this.background = res.data.background;
         this.scheme = res.data.scheme;
         this.classical = res.data.classical;
