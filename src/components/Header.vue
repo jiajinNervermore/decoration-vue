@@ -92,7 +92,10 @@ export default {
   methods: {
     // 改变头像
     changeAvatar() {
-      this.$router.push("/avatar");
+      if(this.userInfo.uid){
+      this.$router.push("/avatar");}else{
+        this.$message('请登录')
+      }
     },
     ...mapMutations(["setUserInfo"]),
     // 显示修改资料栏
